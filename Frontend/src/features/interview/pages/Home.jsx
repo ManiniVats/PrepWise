@@ -301,7 +301,7 @@ const Home = () => {
                     </p>
 
                     <p className={`match-score ${report.matchScore >= 80 ? 'score--high' : report.matchScore >= 60 ? 'score--mid' : 'score--low'}`}>
-                        Match Score: {report.matchScore}%
+                        Match Score: {report.jobMatchScore}%
                     </p>
 
                 </li>
