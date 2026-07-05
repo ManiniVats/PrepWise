@@ -318,7 +318,9 @@ async function generatePdfFromHtml(htmlContent) {
 
     const browser = await puppeteer.launch({
     headless: true,
-    executablePath: puppeteer.executablePath(),
+    executablePath:
+        process.env.PUPPETEER_EXECUTABLE_PATH ||
+        "/opt/render/project/src/Backend/chrome/linux-152.0.7931.0/chrome-linux64/chrome",
     args: [
         "--no-sandbox",
         "--disable-setuid-sandbox"
